@@ -1,0 +1,1 @@
+- **[[Variables]]** - Variables are used to temporarily store changeable values in programming code.

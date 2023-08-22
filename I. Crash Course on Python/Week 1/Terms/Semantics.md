@@ -1,0 +1,1 @@
+- **[[Semantics]]** - Semantics refers to the intended meaning or effect of statements, or collections of words, in both human and computer languages. Semantic errors are also referred to as logical errors.

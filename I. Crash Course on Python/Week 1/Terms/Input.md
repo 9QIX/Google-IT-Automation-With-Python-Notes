@@ -1,0 +1,1 @@
+- **[[Input]]** - Input is information that is provided to a program by the end user. Input can be text, voice, images, biometrics, and more.  

@@ -1,0 +1,1 @@
+- **[[Output]]** - Output is the end result of a task performed by a function or computer program. Output can include a single value, a report, entries into a database, and more. 
