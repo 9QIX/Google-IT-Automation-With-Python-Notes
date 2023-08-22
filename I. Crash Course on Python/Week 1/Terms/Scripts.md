@@ -1,0 +1,3 @@
+[[Scripts]] can be used for automating specific tasks.  [[Automation]] is used to replace a repetitive manual step with one that happens automatically. 
+
+Humans are fallible. They can become tired, make mistakes, fail to follow instructions, be inconsistent in their job performance, and more. In contrast, automated processes complete instructions exactly as coded, in a consistent manner. They can run 24 hours a day, everyday, without tiring. For many tasks that are appropriate for automation, it can be more cost effective to use automation than human labor. 
