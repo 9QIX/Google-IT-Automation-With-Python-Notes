@@ -4,7 +4,7 @@ Welcome to my repository for notes and resources related to the **Google IT Auto
 
 ## Table of Contents 📚
 
-1. [Introduction to Python](./01-introduction-to-python.md) 🐍
+1. [Introduction to Python](https://github.com/9QIX/Google-IT-Automation-With-Python-Notes/tree/main/I.%20Crash%20Course%20on%20Python) 🐍
 2. [Using Python to Interact with the Operating System](./02-python-interact-with-os.md) 🖥️🐍
 3. [Introduction to Git and GitHub](./03-introduction-to-git-and-github.md) 🚀🔗
 4. [Troubleshooting and Debugging Techniques](./04-troubleshooting-and-debugging.md) 🔍🛠️
