@@ -10,9 +10,6 @@ Welcome to my repository for notes and resources related to the **Google IT Auto
 4. [Troubleshooting and Debugging Techniques](./04-troubleshooting-and-debugging.md) 🔍🛠️
 5. [Configuration Management and the Cloud](./05-configuration-management-and-cloud.md) ☁️⚙️
 6. [Automating Real-World Tasks with Python](./06-automating-real-world-tasks.md) 🤖🛠️
-7. [Automating Infrastructure with Google Cloud](./07-automating-infrastructure-gcp.md) 🌐☁️
-8. [Using Python to Interact with APIs](./08-python-interact-with-apis.md) 🐍🔗
-9. [Capstone Project: Automating IT Processes](./09-capstone-project.md) 🌟💡
 
 ## 📝 Notes
 
