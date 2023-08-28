@@ -1,0 +1,1 @@
+In Python, text in between quotes -- either single or double quotes -- is a [[string]] data type. 

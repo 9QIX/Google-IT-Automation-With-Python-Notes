@@ -1,0 +1,1 @@
+An [[integer]] is a whole number, without a fraction, while a [[float]] is a real number that can contain a fractional part. For example, 1, 7, 342 are all integers, while 5.3, 3.14159 and 6.0 are all floats. 
