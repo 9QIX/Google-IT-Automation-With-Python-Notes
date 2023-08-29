@@ -1,0 +1,1 @@
+The purpose of the **[[def()]]** keyword is to define a new function. 

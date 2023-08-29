@@ -1,0 +1,1 @@
+**[[parameter (argument)]]** -  a value passed into a function for use within the function
