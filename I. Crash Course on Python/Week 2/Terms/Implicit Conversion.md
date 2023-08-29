@@ -1,0 +1,1 @@
+**[[Implicit Conversion]]** is where the interpreter helps us out and automatically converts one data type into another, without having to explicitly tell it to do so.
