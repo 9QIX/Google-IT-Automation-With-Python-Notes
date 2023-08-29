@@ -1,0 +1,1 @@
+**[[data types]]** - classes of data (e.g., string, int, float, Boolean, etc.), which include the properties and behaviors of instances of the data type (variables)

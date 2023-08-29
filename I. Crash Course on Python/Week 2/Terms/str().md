@@ -1,0 +1,1 @@
+**[[str()]]** - converts a value (often numeric) to a **string** data type

@@ -1,0 +1,1 @@
+**[[int()]]** - converts a value (usually a float) to an **integer** data type

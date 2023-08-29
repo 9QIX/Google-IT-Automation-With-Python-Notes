@@ -1,0 +1,1 @@
+**[[variable]]** - an instance of a data type class, represented by a unique name within the code, that stores changeable values of the specific data type

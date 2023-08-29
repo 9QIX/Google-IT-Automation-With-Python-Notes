@@ -1,0 +1,1 @@
+**[[expression]]** - a combination of numbers, symbols, or other values that produce a result when evaluated
