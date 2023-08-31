@@ -449,3 +449,268 @@ We can use the concept of **branching** to have our code alter its execution seq
 We just covered the _if_ statement, which executes code if an evaluation is true and skips the code if it’s false. But what if we wanted the code to do something different if the evaluation is false? We can do this using the _else_ statement. The _else_ statement follows an _if_ block, and is composed of the keyword _else_ followed by a colon. The body of the _else_ statement is indented to the right, and will be executed if the above _if_ statement doesn’t execute.
 
 We also touched on the modulo operator, which is represented by the percent sign: **%**. This operator performs integer division, but only returns the remainder of this division operation. If we’re dividing 5 by 2, the quotient is 2, and the remainder is 1. Two 2s can go into 5, leaving 1 left over. So 5%2 would return 1. Dividing 10 by 5 would give us a quotient of 2 with no remainder, since 5 can go into 10 twice with nothing left over. In this case, 10%5 would return 0, as there is no remainder.
+
+# Complex Branching with elif Statements
+
+Building off of the _if_ and _else_ blocks, which allow us to branch our code depending on the evaluation of one statement, the _elif_ statement allows us even more comparisons to perform more complex branching. Very similar to the _if_ statements, an _elif_ statement starts with the _elif_ keyword, followed by a comparison to be evaluated. This is followed by a colon, and then the code block on the next line, indented to the right. An _elif_ statement must follow an _if_ statement, and will only be evaluated if the _if_ statement was evaluated as false. You can include multiple _elif_ statements to build complex branching in your code to do all kinds of powerful things!
+
+# Study Guide: Conditionals
+
+This study guide provides a quick-reference summary of what you learned in this lesson and serves as a guide for the upcoming practice quiz.  
+
+In the Conditionals segment, you learned about the built-in Python operators used for comparing values and the logical operators for making complex comparisons. You also learned how to use operators in if-else-elif blocks. 
+
+# Knowledge
+
+## Comparison operators with numerical values
+
+Comparison expressions return a Boolean result (True or False). 
+
+- x == y        If x is equal to y, return True. Else, return False.
+- x **!=** y         If x is not equal to y, return True. Else, return False.
+- x **<** y          If x is less than y, return True. Else, return False.
+- x **<=** y        If x is less than or equal to y, return True. Else, return False.
+- x **>** y          If x is greater than y, return True. Else, return False.
+- x **>=** y        If x is greater or equal to y, return True. Else, return False.
+
+## Comparison operators with strings
+
+Comparison expressions with strings also return a Boolean result (True or False).
+
+- "x" == "y"  If the words are the same, return True. Else, return False.
+- "x" **!=** "y"   If the words are **not** the same, return True. Else, return False.
+    
+
+When used with strings, the following comparison expressions will alphabetize the strings.
+
+- "x" **<** "y"   If string "x"  has a smaller Unicode value than string "y", return True. Else, return False.
+- "x" **<=** "y" If the Unicode value for string "x" is smaller than or equal to the Unicode value of string "y", return True. Else, return False.
+- "x" **>** "y"    If string "x" has a larger Unicode value than string "y", return True. Else, return False.
+- "x" **>=** "y"  If the Unicode value for string "x" is greater than or equal to the Unicode value of string "y", return True. Else, return False.
+
+**Unicode values for the alphabet**
+![Image containing the unicode value of each letter of the alphabet](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/2ct56G7FQw2v8tQEGondGA_406050de37a347d89594906734514cf1_Unicode_table.png?expiry=1693612800000&hmac=I_SPL-lR87VYqbmGXw0q_sRQt6nEHmbbO7kchWsQVPk)
+
+The Unicode numbering for the alphabet starts at 65 for capital letter A and runs to 90 for capital letter Z. Then, the lowercase alphabet values start at 97 for lowercase a and run to 122 for lowercase z. Using these Unicode numbers, capital A's code is less than the codes of all other letters, which Python interprets as the beginning of the alphabet. Lowercase z's code is greater than the codes of all other letters, which Python interprets as the ultimate end of the English alphabet.
+
+## Logical operators
+
+Logical operators are used to combine comparison expressions and also return Boolean results (True or False).
+
+- comparison1 **and** comparison2
+    - Returns a True result if both comparison1 **and** comparison2 are true.
+    - If they are not both true, return False.
+- comparison1 **or** comparison2 
+    - Returns a True result if either comparison1 and/or comparison2 are True.
+    - If neither comparison is true, return False.
+- **not** comparison1
+    - Returns the inverse Boolean value of the comparison.
+        - Returns a True result if comparison1 is false.
+        - If comparison1 is true, then returns False.
+
+## Syntax of an if-elif-else block
+```python
+if condition1:
+    action1
+elif condition2:
+    action2
+else:
+    action3
+```
+
+```
+- If condition1 is True:
+    
+    - Then perform action1 and exit if-elif-else block
+        
+- If condition2 is True:
+    
+    - Then perform action2 and exit if-elif-else block
+        
+- If neither condition1 nor condition2 are True:
+    
+    - Then perform action3 and exit if-elif-else block
+```
+
+# Coding skills
+
+**Skill Group 1**
+
+- Use a comparison operator with numbers
+- Use a comparison operator to alphabetize strings
+
+```python
+# The value of 10*4 (40) is greater than 14+23 (37), therefore this 
+# comparison expression will return the Boolean value of True.
+
+
+print(10*4 > 14+23) # Should print True
+
+# The letter "t" has a Unicode value of 116 and the letter "s" has a
+# Unicode value of 115. Since 116 is not less than 115, the 
+# comparison of "tall" < "short" (or 116 < 115) is False. 
+
+print("tall" < "short")  # Should print False
+```
+Output:
+```
+True
+False
+```
+
+**Skill Group 2**
+
+- Use a function with the def() keyword
+- Pass a parameter to the function
+- Use an if-elif-else statement
+- Assign strings to variables 
+- Use conditional operators
+- Return a value
+
+```python
+# This function accepts one variable as a parameter
+def translate_error_code(error_code):
+ 
+# The if-elif-else block assesses the value of the variable
+# passed to the function as a parameter. The if statement uses 
+# the equality operator == to test the value of the variable.
+# This test returns a Boolean (True/False) result.
+    if error_code == "401 Unauthorized":
+# If the comparison above returns True, then the indented 
+# line(s) inside the if-statement will run. In this case, the
+# action is to assign a string to the translation variable.
+# The remainder of the if-elif-else block will not run.
+# The Python interpreter will skip to the next line outside of 
+# the if-elif-else block. In this case, the next line is the 
+# return value statement.  
+        translation = "Server received an unauthenticated request"
+ 
+# If the initial if-statement returns a False result, then the
+# first elif-statement will run a different test on the value
+# of the variable.
+    elif error_code == "404 Not Found":
+# If the first elif-statement returns a True result, then the
+# indented line(s) inside the first elif-statement will run. 
+# After this line, the remainder of the if-elif-else block will
+# not run. The Python interpreter will skip to the next line
+# outside of the if-elif-else block. 
+        translation = "Requested web page not found on server"
+ 
+# If both the initial if-statement and the first elif-statement 
+# return a False result, then the second elif-statement will
+# run.
+    elif error_code == "408 Request Timeout":
+# If the second elif-statement returns a True result, then the
+# indented line(s) inside the second elif-statement will run. 
+# After this line, the remainder of the if-elif-else block will
+# not run. The Python interpreter will skip to the next line
+# outside of the if-elif-else block. 
+        translation = "Server request to close unused connection"
+ 
+# If the conditional tests above do not produce a True result
+# then the else-statement will run. 
+    else:
+        translation = "Unknown error code"
+# The if-elif-else block ends.
+
+# The next line outside of the if-elif-else block will run
+# after exiting the block. In this case, the next line returns
+# the output from the if-elif-else block.
+    return translation
+
+# The print() function allows us to display the output of the
+# function. To call a function in a print statement, the syntax
+# is print(name_of_function(parameter))
+print(translate_error_code("404 Not Found"))
+
+# Expected output:
+# Requested web page not found on server
+```
+Output:
+```
+Requested web page not found on server
+```
+
+**Skill Group 3**
+
+- Use an if-elif-else statement with:
+    - comparison operators
+    - logical operators
+
+```python
+# Sets value of the "number" variable
+number = 25
+
+# The "number" variable will first be compared to 5. Since it is 
+# False that "number" is not less than or equal to 5, the expression indented 
+# under this line will be ignored. 
+if number <= 5: 
+   print("The number is 5 or smaller.")
+ 
+# Next, the "number" variable will be compared to 33. Since it is 
+# False that "number" is equal to 33, the expression indented under 
+# this line will be ignored. 
+elif number == 33:
+   print("The number is 33.")
+ 
+# Then, the "number" variable will be compared to 32 and 6. Since it 
+# is True that 25 is less than 32 and greater than 6, the Python 
+# interpreter will print "The number is less than 32 and/or greater
+# than 6." Then, it will exit the if-elif-else statement and the remainder 
+# of the if-elif-else statement will be ignored.
+elif number < 32 and number >= 6:
+   print("The number is less than 32 and greater than 6.")
+ 
+else:
+   print("The number is " + str(number))
+ 
+# Expected output is: 
+# The number is less than 32 and greater than 6.
+```
+Output:
+```
+The number is less than 32 and greater than 6.
+```
+
+**Skill Group 4**
+
+- Use an if statement to calculate a return value
+- Use conditional operators
+- Recall the arithmetic operators // and %
+
+```python
+# This function rounds a variable number up to the nearest 10x value
+def round_up(number):
+  x = 10
+# The floor division operator will calculate the integer value of
+# "number" divided by x: 35 // 10 will return the integer 3.
+  whole_number = number // x
+# The modulo operator will calculate the remainder value of "number"
+# divided by x: 35 % 10 will return the remainder value 5.
+  remainder = number % x
+# If the remainder is greater than 0: 
+  if remainder >= 5: 
+# Return x multiplied by the (whole_number+1) to round up
+    return x*(whole_number+1)
+# Else, return x multiplied by the whole_number to round down
+  return x*whole_number
+ 
+# Calls the function with the parameter value of 35.
+print(round_up(35)) # Should print 40
+```
+Output:
+```
+40
+```
+
+# Python practice information
+
+For additional Python practice, the following links will take you to several popular online interpreters and codepads:
+
+- [Welcome to Python](https://www.python.org/shell/)
+- [Online Python Interpreter](https://www.onlinegdb.com/online_python_interpreter)
+- [Create a new Repl](https://repl.it/languages/python3)
+- [Online Python-3 Compiler (Interpreter)](https://www.tutorialspoint.com/execute_python3_online.php)
+- [Compile Python 3 Online](https://rextester.com/l/python3_online_compiler)
+- [Your Python Trinket](https://trinket.io/python3)
+
