@@ -444,3 +444,8 @@ For more information about the concepts covered in these practice exercises, ple
 
 We can use the concept of **branching** to have our code alter its execution sequence depending on the values of variables. We can use an _if_ statement to evaluate a comparison. We start with the _if_ keyword, followed by our comparison. We end the line with a colon. The body of the _if_ statement is then indented to the right. If the comparison is _**True**_, the code inside the _if_ body is executed. If the comparison evaluates to _**False**__,_ then the code block is skipped and will not be run.
 
+# else Statements and the Modulo Operator
+
+We just covered the _if_ statement, which executes code if an evaluation is true and skips the code if it’s false. But what if we wanted the code to do something different if the evaluation is false? We can do this using the _else_ statement. The _else_ statement follows an _if_ block, and is composed of the keyword _else_ followed by a colon. The body of the _else_ statement is indented to the right, and will be executed if the above _if_ statement doesn’t execute.
+
+We also touched on the modulo operator, which is represented by the percent sign: **%**. This operator performs integer division, but only returns the remainder of this division operation. If we’re dividing 5 by 2, the quotient is 2, and the remainder is 1. Two 2s can go into 5, leaving 1 left over. So 5%2 would return 1. Dividing 10 by 5 would give us a quotient of 2 with no remainder, since 5 can go into 10 twice with nothing left over. In this case, 10%5 would return 0, as there is no remainder.
