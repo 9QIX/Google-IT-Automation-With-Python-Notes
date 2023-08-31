@@ -1,0 +1,1 @@
+[[Boolean]] is a data type that can hold only one of two values: **True** or **False**.
