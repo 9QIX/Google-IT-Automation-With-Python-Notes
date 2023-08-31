@@ -440,3 +440,7 @@ When Python logical operators are used with comparison operators, the interprete
 For more information about the concepts covered in these practice exercises, please visit:
 - [Understanding Boolean Logic in Python 3](https://www.digitalocean.com/community/tutorials/understanding-boolean-logic-in-python-3) A handy guide for reviewing both logical and conditional operators.
 
+# if Statements Recap
+
+We can use the concept of **branching** to have our code alter its execution sequence depending on the values of variables. We can use an _if_ statement to evaluate a comparison. We start with the _if_ keyword, followed by our comparison. We end the line with a colon. The body of the _if_ statement is then indented to the right. If the comparison is _**True**_, the code inside the _if_ body is executed. If the comparison evaluates to _**False**__,_ then the code block is skipped and will not be run.
+
