@@ -1,0 +1,1 @@
+- **[[divisor]]** - A number (denominator) that is used to divide another number (numerator). For example, if the number 10 is divided by 5, the number 5 is the divisor.

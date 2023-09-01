@@ -1,0 +1,1 @@
+- **[[sum of all divisors of a number]]** - The result of adding all of the divisors of a number together.  

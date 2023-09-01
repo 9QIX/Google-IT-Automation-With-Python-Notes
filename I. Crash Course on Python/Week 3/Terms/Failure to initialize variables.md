@@ -1,0 +1,1 @@
+- **[[Failure to initialize variables]].** Make sure all the variables used in the loop’s condition are initialized before the loop.

@@ -1,0 +1,1 @@
+- **[[while loop]]** - Tells the computer to execute a set of instructions while a specified condition is True. In other words, **while** loops keep executing the same group of instructions until the condition becomes False.

@@ -1,0 +1,1 @@
+- **[[prime numbers]]** - Integers that have only two factors, which are the number itself multiplied by 1. The lowest prime number is 2.
