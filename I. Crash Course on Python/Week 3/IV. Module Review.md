@@ -260,3 +260,137 @@ Output:
 ```
 The CEO has a 7-figure salary.
 ```
+
+## **Skill 3:** Using **while** loops with **if-else** statements
+
+- Use a function to accept two variable integers. 
+- Use nested **if-else** statements and **while** loops to count up or count down from the first variable to the second variable.
+
+```python
+# This function will accept two integer variables: the floor
+# number that a passenger "enter"s an elevator and the floor
+# number the passenger is going to "exit". Then, the function
+# counts up or down from the two floor numbers.
+def elevator_floor(enter, exit):
+    # The "floor" variable will be used as a counter and to  
+    # print the floor numbers. The "elevator_direction"
+    # variable will hold the string "Going up: " or 
+    # "Going down: " plus the count up or down of the 
+    # "floor" numbers.
+    floor = enter
+    elevator_direction = ""
+
+    # If the passenger enters the elevator on a floor that  
+    # is higher than the destination floor:
+    if enter > exit:
+        
+        # Then the "elevator_direction" string will be 
+        # initialized with the string "Going down: ".
+        elevator_direction = "Going down: "
+
+        # While the "floor" number is greater than or  
+        # equal to the exit floor number:
+        while floor >= exit:
+            # The "floor" number is converted to a string 
+            # and is appended to the string variable 
+            # "elevator_direction".
+            elevator_direction += str(floor)
+
+            # If the "floor" number is still greater than  
+            # the exit floor number:
+            if floor > exit:
+
+                # A pipe | character is added between each  
+                # floor number in the string variable  
+                # "elevator_direction" to provide a visual  
+                # divider between numbers. The if-statement 
+                # above (if floor > exit) prevents the pipe 
+                # character from appearing after the "floor" 
+                # number is no longer greater than the "exit" 
+                # variable. 
+                elevator_direction += " | "
+                
+                # Decrement the "floor" number as the elevator 
+                # goes down.
+            floor -= 1
+
+    # Else, it is implied that the passenger is entering the  
+    # elevator on a floor that is lower than the destination 
+    # floor.
+    else:
+
+        # The "elevator_direction" string will be initialized 
+        # with the string "Going up: ".
+        elevator_direction = "Going up: "
+        
+        # While the "floor" number is less than or equal to the 
+        # "exit" floor number:
+        while floor <= exit:
+
+            # Convert the the "floor" number to a string and append 
+            # it to the string variable "elevator_direction".
+            elevator_direction += str(floor)
+
+            # If the entry floor number is still less than the exit 
+            # floor number:
+            if floor < exit:
+
+                # The pipe | character is added between each  
+                # floor number in the string variable  
+                # "elevator_direction" to provide a visual  
+                # divider between numbers. The if-statement 
+                # above (if floor < exit) prevents the pipe 
+                # character from appearing after the "floor" 
+                # number is no longer less than the "exit" 
+                # variable. 
+                elevator_direction += " | "
+
+            # Increments the "floor" number as the elevator goes up.
+            floor += 1
+
+    # Returns the string holding the elevator direction (Going down or 
+    # Going up) along with the floor countdown or count up.
+    return elevator_direction
+
+
+# Call the function with 2 integer parameters. 
+print(elevator_floor(1,4)) # Should print Going up: 1 | 2 | 3 | 4
+print(elevator_floor(6,2)) # Should print Going down: 6 | 5 | 4 | 3 | 2
+
+```
+Output:
+```
+Going up: 1 | 2 | 3 | 4
+Going down: 6 | 5 | 4 | 3 | 2
+```
+
+# Reminder: Correct syntax is critical
+
+Using precise syntax is critical when writing code in any programming language, including Python. Even a small typo can cause a syntax error and the automated Python-coded quiz grader will mark your code as incorrect. This reflects real life coding errors in the sense that a single error in spelling, case, punctuation, etc. can cause your code to fail. Coding problems caused by imprecise syntax will always be an issue whether you are learning a programming language or you are using programming skills on the job. So, it is critical to start the habit of being precise in your code now. 
+
+No credit will be given if there are any coding errors on the automated graded quizzes - including minor errors. Fortunately, you have 3 optional retake opportunities on the graded quizzes in this course. Additionally, you have unlimited retakes on practice quizzes and can review the videos and readings as many times as you need to master the concepts in this course.  
+
+Now, before starting the graded quiz, please review this list of common syntax errors coders make when writing code.
+
+### **Common syntax errors:**
+
+- Misspellings
+- Incorrect indentations
+- Missing or incorrect key characters:
+    - Parenthetical types - ( curved ), [ square ], { curly }
+    - Quote types - "straight-double" or 'straight-single', “curly-double” or ‘curly-single’
+    - Block introduction characters, like colons - :
+- Data type mismatches
+- Missing, incorrectly used, or misplaced Python reserved words
+- Using the wrong case (uppercase/lowercase) - Python is a case-sensitive language 
+
+# Resources
+
+For additional Python practice, the following links will take you to several popular online interpreters and codepads:
+
+- [Welcome to Python](https://www.python.org/shell/)
+- [Online Python Interpreter](https://www.onlinegdb.com/online_python_interpreter)
+- [Create a new Repl](https://repl.it/languages/python3)
+- [Online Python-3 Compiler (Interpreter)](https://www.tutorialspoint.com/execute_python3_online.php)
+- [Compile Python 3 Online](https://rextester.com/l/python3_online_compiler)
+- [Your Python Trinket](https://trinket.io/python3)
