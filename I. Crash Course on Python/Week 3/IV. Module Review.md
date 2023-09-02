@@ -206,3 +206,10 @@ while starting_number >= 0:
 # Should print 18 15 12 9 6 3 0 
 
 ```
+Output:
+```
+18 15 12 9 6 3 0
+```
+
+
+
