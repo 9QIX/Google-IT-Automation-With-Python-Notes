@@ -1,0 +1,2 @@
+### **[[Start]]**  
+The first item in the **range()** function parameters is the starting position of the range. The default is the first index position, which points to the numeric value 0. This value is included in the range. 
