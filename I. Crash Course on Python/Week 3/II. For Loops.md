@@ -279,3 +279,82 @@ for x in sequence:
 ```
 
 Example of nested **for** loops:
+
+```python
+# This code demonstrates the outer and inner loop iterations of a pair 
+# of nested for loops. Click "Run" to see the results. The outer loop
+# will run twice for the range pointer positions [0, 1] in range(2).
+# The inner loop will run 4 times for the range pointer positions 
+# [0, 1, 2, 3] in range(3+1) or range(4) each time the outer loop runs.
+# So, the inner loop will execute 8 times in total.
+
+for x in range(2):
+    print("This is the outer loop iteration number " + str(x))
+    for y in range(3+1):
+        print("Inner loop iteration number " + str(y))
+    print("Exit inner loop") 
+```
+Output:
+```
+This is the outer loop iteration number 0
+Inner loop iteration number 0
+Inner loop iteration number 1
+Inner loop iteration number 2
+Inner loop iteration number 3
+Exit inner loop
+This is the outer loop iteration number 1
+Inner loop iteration number 0
+Inner loop iteration number 1
+Inner loop iteration number 2
+Inner loop iteration number 3
+Exit inner loop
+```
+
+## **for** Loop with nested **if** Statement
+
+The syntax of a **for** Loop with nested **if** Statement:
+```python
+for x in sequence:
+    # start of body of for loop
+    if condition is true:
+        # start of body of if-statement
+
+        # end of body of if-statement
+    # continue body of for loop
+    # end of body of for loop
+```
+
+Example of a **for** Loop with Nested **if** Statement:
+
+```python
+# This for loop iterates through the numbers 0 to 6. The if statement
+# uses the modulo operator to test if the "x" variable is divisible by
+# 2. If True, the if statement will print the value of "x" and exit
+# back into the for loop for the next iteration of "x". Since no 
+# incremental value is specified in the range() parameters, the default
+# increment is +1. 
+
+for x in range(7):
+    if x % 2 == 0:
+        print(x)
+
+# The loop should print 0, 2, 4, 6
+```
+Output:
+```
+0
+2
+4
+6
+```
+
+# Python practice information
+
+For additional Python practice, the following links will take you to several popular online interpreters and codepads:
+
+- [Welcome to Python](https://www.python.org/shell/)
+- [Online Python Interpreter](https://www.onlinegdb.com/online_python_interpreter)
+- [Create a new Repl](https://repl.it/languages/python3)
+- [Online Python-3 Compiler (Interpreter)](https://www.tutorialspoint.com/execute_python3_online.php)
+- [Compile Python 3 Online](https://rextester.com/l/python3_online_compiler)
+- [Your Python Trinket](https://trinket.io/python3)
