@@ -1,0 +1,1 @@
+- **[[iterators]]** - Know the various options available for iterating a variable (e.g., using assignment operators, using the third **range()** function parameter). You will also need to analyze where the iteration should occur. A misplaced iterator could produce the wrong output or create an infinite loop.  

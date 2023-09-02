@@ -1,0 +1,2 @@
+- **[[print()]] Function Default Behavior** - Know the default behavior of the **print()** function is to insert a new line character after the print statement runs.
+    - To override the insertion of the new line character and replace it with a space, add **end=" "** as the last item in the **print()** parameters. This makes it possible to add the next print output to the same line, separated by a space. You might use this technique when a print() function is part of a **for** or **while** loop. Example syntax:  **print(x+1, end=" ")**
