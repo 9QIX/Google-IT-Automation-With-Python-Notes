@@ -1,0 +1,1 @@
+The inverse of the join method is the **[[split]]** method. This allows us to split a string into a list of strings. By default, it splits by any whitespace characters. You can also split by any other characters by passing a parameter.
