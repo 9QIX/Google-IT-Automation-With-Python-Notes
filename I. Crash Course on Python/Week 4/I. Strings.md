@@ -239,3 +239,132 @@ for x in range(0, 101, 10):
 
 This code defines a function `to_celsius` to convert Fahrenheit to Celsius and then uses a loop to print a table of Fahrenheit and Celsius values in a well-formatted manner.
 
+# String Reference Guide
+
+In Python, there are a lot of things you can do with strings. In this guide, you’ll find the most common string operations and string methods.
+
+### String operations
+
+1. **[[len(string)]]** - Returns the length of the string.
+   ```python
+   text = "Hello, World!"
+   length = len(text)
+   print(length)  # Output: 13
+   ```
+
+2. **[[for character in string]]** - Iterates over each character in the string.
+   ```python
+   text = "Python"
+   for char in text:
+       print(char)  # Output: P y t h o n
+   ```
+
+3. **[[if substring in string]]** - Checks whether the substring is part of the string.
+   ```python
+   text = "Hello, World!"
+   if "World" in text:
+       print("Found")  # Output: Found
+   ```
+
+4. ``string[i]`` - Accesses the character at index i of the string, starting at zero.
+   ```python
+   text = "Python"
+   char = text[2]
+   print(char)  # Output: t
+   ```
+
+5. ``string[i:j]`` - Accesses the substring starting at index i, ending at index j minus 1. If i is omitted, its value defaults to 0. If j is omitted, the value will default to len(string).
+   ```python
+   text = "Python"
+   substring = text[1:4]
+   print(substring)  # Output: yth
+   ```
+
+### String methods
+
+6. **[[string.lower()]]** - Returns a copy of the string with all lowercase characters.
+   ```python
+   text = "Hello, World!"
+   lowercase = text.lower()
+   print(lowercase)  # Output: hello, world!
+   ```
+
+7. **[[string.upper()]]** - Returns a copy of the string with all uppercase characters.
+   ```python
+   text = "Hello, World!"
+   uppercase = text.upper()
+   print(uppercase)  # Output: HELLO, WORLD!
+   ```
+
+8. **[[string.lstrip()]]** - Returns a copy of the string with the left-side whitespace removed.
+   ```python
+   text = "   Python"
+   stripped = text.lstrip()
+   print(stripped)  # Output: "Python" (with no leading spaces)
+   ```
+
+9. **[[string.rstrip()]]** - Returns a copy of the string with the right-side whitespace removed.
+   ```python
+   text = "Python   "
+   stripped = text.rstrip()
+   print(stripped)  # Output: "Python" (with no trailing spaces)
+   ```
+
+10. **[[string.strip()]]** - Returns a copy of the string with both the left and right-side whitespace removed.
+    ```python
+    text = "   Python   "
+    stripped = text.strip()
+    print(stripped)  # Output: "Python" (with no leading or trailing spaces)
+    ```
+
+11. **[[string.count(substring)]]** - Returns the number of times substring is present in the string.
+    ```python
+    text = "She sells seashells by the seashore."
+    count = text.count("se")
+    print(count)  # Output: 3
+    ```
+
+12. **[[string.isnumeric()]]** - Returns True if there are only numeric characters in the string. If not, returns False.
+    ```python
+    num_str = "12345"
+    is_numeric = num_str.isnumeric()
+    print(is_numeric)  # Output: True
+    ```
+
+13. **[[string.isalpha()]]** - Returns True if there are only alphabetic characters in the string. If not, returns False.
+    ```python
+    alpha_str = "Python"
+    is_alpha = alpha_str.isalpha()
+    print(is_alpha)  # Output: True
+    ```
+
+14. **[[string.split()]]** - Returns a list of substrings that were separated by whitespace (whitespace can be a space, tab, or new line).
+    ```python
+    text = "Split this sentence into words"
+    words = text.split()
+    print(words)  # Output: ['Split', 'this', 'sentence', 'into', 'words']
+    ```
+
+15. **[[string.split(delimiter)]]** - Returns a list of substrings that were separated by whitespace or a delimiter.
+    ```python
+    csv_data = "Alice,Bob,Charlie,David"
+    values = csv_data.split(',')
+    print(values)  # Output: ['Alice', 'Bob', 'Charlie', 'David']
+    ```
+
+16. **[[string.replace(old, new)]]** - Returns a new string where all occurrences of old have been replaced by new.
+    ```python
+    text = "Hello, World!"
+    new_text = text.replace("World", "Python")
+    print(new_text)  # Output: Hello, Python
+	```
+
+17. **[[delimiter.join(list of strings)]]** - Returns a new string with all the strings joined by the delimiter.
+
+    ```python
+    words = ["This", "is", "a", "sentence"]
+    sentence = " ".join(words)
+    print(sentence)  # Output: "This is a sentence"
+    ```
+
+Check out the official documentation for [all available String methods](https://docs.python.org/3/library/stdtypes.html#string-methods)
