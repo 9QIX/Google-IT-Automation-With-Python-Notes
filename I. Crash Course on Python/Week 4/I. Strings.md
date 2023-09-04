@@ -50,3 +50,50 @@ def replace_domain(email, old_domain, new_domain):
 ```
 
 This function essentially checks if an email address contains a specific old domain and replaces it with a new domain if found. If the old domain is not present, it returns the original email unchanged.
+
+# Basic String Methods
+
+In Python, ***strings are immutable***. This means that they can't be modified. So if we wanted to fix a typo in a string, we can't simply modify the wrong character. We would have to create a new string with the typo corrected. We can also assign a new value to the variable holding our string.
+
+If we aren't sure what the index of our typo is, we can use the string method _index_ to locate it and return the index. Let's imagine we have the string **"lions tigers and bears"** in the variable **animals**. We can locate the index that contains the letter **g** using _animals.index("g")_, which will return the index; in this case 8. We can also use substrings to locate the index where the substring begins. _animals.index("bears")_ would return 17, since that’s the start of the substring. If there’s more than one match for a substring, the index method will return the first match. If we try to locate a substring that doesn't exist in the string, we’ll receive a **ValueError** explaining that the substring was not found.
+
+```python
+animals = "lions tigers and bears"
+animals.index("g")
+```
+Output:
+```
+8
+```
+
+
+```python
+animals = "lions tigers and bears"
+animals.index("bears")
+```
+Output:
+```
+17
+```
+
+We can avoid a ValueError by first checking if the substring exists in the string. This can be done using the _**in**_ keyword. We saw this keyword earlier when we covered _for_ loops. In this case, it's a conditional that will be either True or False. If the substring is found in the string, it will be True. If the substring is not found in the string, it will be False. Using our previous variable **animals**, we can do **"horses"** **in animals** to check if the substring "horses" is found in our variable. In this case, it would evaluate to False, since horses aren’t included in our example string. If we did **"tigers" in animals**, we'd get True, since this substring is contained in our string.
+
+```python
+animals = "lions tigers and bears"
+"horses" in animals
+```
+Output:
+```
+False
+```
+
+
+```python
+animals = "lions tigers and bears"
+"tigers" in animals
+```
+Output:
+```
+True
+```
+
