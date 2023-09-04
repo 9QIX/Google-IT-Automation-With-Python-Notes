@@ -177,3 +177,24 @@ split_text = text.split()  # By default, splits by whitespace
 
 print(split_text)  # Output: ['This', 'is', 'a', 'sentence']
 ```
+
+# Formatting strings
+
+```python
+# Define a function to convert Fahrenheit to Celsius.
+def to_celsius(x):
+    return (x - 32) * 5 / 9
+
+# Loop through a range of Fahrenheit values from 0 to 100 in increments of 10.
+for x in range(0, 101, 10):
+
+    # Use string formatting to display the Fahrenheit and Celsius values with proper alignment.
+    # The {:>3} and {:>6.2f} are placeholders for values to be inserted.
+    # {:>3} means right-aligned with a field width of 3 characters for the Fahrenheit value.
+    # {:>6.2f} means right-aligned with a field width of 6 characters and 2 decimal places for the Celsius value.
+    # The .format() method inserts the values into the placeholders and formats the output.
+    print("{:>3} F | {:>6.2f} C".format(x, to_celsius(x)))
+```
+
+This code defines a function `to_celsius` to convert Fahrenheit to Celsius and then uses a loop to print a table of Fahrenheit and Celsius values in a well-formatted manner.
+
