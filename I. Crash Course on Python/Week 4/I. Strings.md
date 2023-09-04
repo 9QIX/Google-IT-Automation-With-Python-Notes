@@ -7,23 +7,46 @@ You can also access a portion of a string, called a [[slice]] or a substring. Th
 This range is similar to the range() function we saw previously. It includes the first number, but goes to one less than the last number. For example:
 
 ```
->>> fruit = "Mangosteen" >>> fruit[1:4] 'ang'
+>>> fruit = "Mangosteen" 
+>>> fruit[1:4] 
+>>> 'ang'
 ```
 
 The slice _includes_ the character at index 1, and _excludes_ the character at index 4. You can also easily reference a substring at the start or end of the string by only specifying one end of the range. For example, only giving the end of the range:
 
 ```
->>> fruit[:5] 'Mango'
+>>> fruit[:5] 
+>>> 'Mango'
 ```
 
 This gave us the characters from the start of the string through index 4, _excluding_ index 5. On the other hand this example gives is the characters _including_ index 5, through the end of the string:
 
 ```
->>> fruit[5:] 'steen'
+>>> fruit[5:] 
+>>> 'steen'
 ```
 
 You might have noticed that if you put both of those results together, you get the original string back!
 
 ```
->>> fruit[:5] + fruit[5:] 'Mangosteen'
+>>> fruit[:5] + fruit[5:] 
+>>> 'Mangosteen'
 ```
+
+# Sample code for indexing
+
+```python
+def replace_domain(email, old_domain, new_domain):
+    # Check if the old domain is present in the email address
+    if "@" + old_domain in email:
+        # Find the index position of the "@" character followed by the old domain
+        index = email.index("@" + old_domain)
+        # Create a new email address by replacing the old domain with the new domain
+        new_email = email[:index] + "@" + new_domain
+        # Return the updated email address
+        return new_email
+    # If the old domain is not found in the email, return the original email
+    return email
+```
+
+This function essentially checks if an email address contains a specific old domain and replaces it with a new domain if found. If the old domain is not present, it returns the original email unchanged.
