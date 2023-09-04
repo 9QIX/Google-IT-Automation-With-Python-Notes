@@ -178,22 +178,63 @@ split_text = text.split()  # By default, splits by whitespace
 print(split_text)  # Output: ['This', 'is', 'a', 'sentence']
 ```
 
-# Formatting strings
+# String Formatting
+
+You can use the **[[format]]** method on strings to concatenate and format strings in all kinds of powerful ways. To do this, create a string containing curly brackets, **{}**, as a placeholder, to be replaced. Then call the format method on the string using _.format()_ and pass variables as parameters. The variables passed to the method will then be used to replace the curly bracket placeholders. This method automatically handles any conversion between data types for us. 
+
+If the curly brackets are empty, they’ll be populated with the variables passed in the order in which they're passed. However, you can put certain expressions inside the curly brackets to do even more powerful string formatting operations. You can put the name of a variable into the curly brackets, then use the names in the parameters. This allows for more easily readable code, and for more flexibility with the order of variables.
 
 ```python
-# Define a function to convert Fahrenheit to Celsius.
+name = "Alice"
+age = 30
+message = "Hello, {}! You are {} years old.".format(name, age)
+print(message)  # Output: Hello, Alice! You are 30 years old.
+```
+
+```python
+name = "Bob"
+age = 25
+message = "Hello, {name}! You are {age} years old.".format(name=name, age=age)
+print(message)  # Output: Hello, Bob! You are 25 years old.
+```
+
+You can also put a formatting expression inside the curly brackets, which lets you alter the way the string is formatted. For example, the formatting expression **{:.2f}** means that you’d format this as a float number, with two digits after the decimal dot. The colon acts as a separator from the field name, if you had specified one. You can also specify text alignment using the greater than operator: **>**. For example, the expression **{:>3.2f}** would align the text three spaces to the right, as well as specify a float number with two decimal places. String formatting can be very handy for outputting easy-to-read textual output.
+
+```python
+price = 19.99
+formatted_price = "The price is {:.2f} dollars.".format(price)
+print(formatted_price)  # Output: The price is 19.99 dollars.
+```
+
+```python
+value = 42
+aligned_value = "Value: {:>5}".format(value)
+print(aligned_value)  # Output: Value:    42
+```
+
+More complex example:
+```python
+# Define a function to convert Fahrenheit to Celsius
 def to_celsius(x):
     return (x - 32) * 5 / 9
 
-# Loop through a range of Fahrenheit values from 0 to 100 in increments of 10.
+# Loop through Fahrenheit temperatures from 0 to 100 in steps of 10
 for x in range(0, 101, 10):
-
-    # Use string formatting to display the Fahrenheit and Celsius values with proper alignment.
-    # The {:>3} and {:>6.2f} are placeholders for values to be inserted.
-    # {:>3} means right-aligned with a field width of 3 characters for the Fahrenheit value.
-    # {:>6.2f} means right-aligned with a field width of 6 characters and 2 decimal places for the Celsius value.
-    # The .format() method inserts the values into the placeholders and formats the output.
+    # Format and print the temperature in both Fahrenheit and Celsius
     print("{:>3} F | {:>6.2f} C".format(x, to_celsius(x)))
+
+# Expected Output:
+#  0 F | -17.78 C
+# 10 F | -12.22 C
+# 20 F |  -6.67 C
+# 30 F |  -1.11 C
+# 40 F |   4.44 C
+# 50 F |  10.00 C
+# 60 F |  15.56 C
+# 70 F |  21.11 C
+# 80 F |  26.67 C
+# 90 F |  32.22 C
+#100 F |  37.78 C
 ```
 
 This code defines a function `to_celsius` to convert Fahrenheit to Celsius and then uses a loop to print a table of Fahrenheit and Celsius values in a well-formatted manner.
