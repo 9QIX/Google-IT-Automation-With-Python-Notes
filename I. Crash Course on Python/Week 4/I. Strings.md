@@ -6,7 +6,7 @@ You can also access a portion of a string, called a [[slice]] or a substring. Th
 
 This range is similar to the range() function we saw previously. It includes the first number, but goes to one less than the last number. For example:
 
-```
+```python
 >>> fruit = "Mangosteen" 
 >>> fruit[1:4] 
 >>> 'ang'
@@ -14,21 +14,21 @@ This range is similar to the range() function we saw previously. It includes the
 
 The slice _includes_ the character at index 1, and _excludes_ the character at index 4. You can also easily reference a substring at the start or end of the string by only specifying one end of the range. For example, only giving the end of the range:
 
-```
+```python
 >>> fruit[:5] 
 >>> 'Mango'
 ```
 
 This gave us the characters from the start of the string through index 4, _excluding_ index 5. On the other hand this example gives is the characters _including_ index 5, through the end of the string:
 
-```
+```python
 >>> fruit[5:] 
 >>> 'steen'
 ```
 
 You might have noticed that if you put both of those results together, you get the original string back!
 
-```
+```python
 >>> fruit[:5] + fruit[5:] 
 >>> 'Mangosteen'
 ```
@@ -97,3 +97,83 @@ Output:
 True
 ```
 
+# Advanced String Methods
+
+We've covered a bunch of String class methods already, so let's keep building on those and run down some more advanced methods.
+
+The string method **[[lower]]** will return the string with all characters changed to lowercase. The inverse of this is the **[[upper]]** method, which will return the string all in uppercase. Just like with previous methods, we call these on a string using dot notation, like **"this is a string".upper()**. This would return the string **"THIS IS A STRING"**. This can be super handy when checking user input, since someone might type in all lowercase, all uppercase, or even a mixture of cases.
+
+```python
+text = "This is a String"
+lower_text = text.lower()
+upper_text = text.upper()
+
+print(lower_text)  # Output: "this is a string"
+print(upper_text)  # Output: "THIS IS A STRING"
+```
+
+You can use the **[[strip]]** method to remove surrounding whitespace from a string. Whitespace includes spaces, tabs, and newline characters. You can also use the methods  **lstrip** and **rstrip** to remove whitespace only from the left or the right side of the string, respectively.
+
+```python
+text = "   Some whitespace   "
+stripped_text = text.strip()
+left_stripped_text = text.lstrip()
+right_stripped_text = text.rstrip()
+
+print(stripped_text)        # Output: "Some whitespace"
+print(left_stripped_text)   # Output: "Some whitespace   "
+print(right_stripped_text)  # Output: "   Some whitespace"
+```
+
+The method **[[count]]** can be used to return the number of times a substring appears in a string. This can be handy for finding out how many characters appear in a string, or counting the number of times a certain word appears in a sentence or paragraph.
+
+```python
+text = "This is a test sentence. This sentence is a test."
+word = "is"
+count = text.count(word)
+
+print(f"The word '{word}' appears {count} times in the text.")
+# Output: "The word 'is' appears 2 times in the text."
+```
+
+If you wanted to check if a string ends with a given substring, you can use the method **[[endswith]]**. This will return True if the substring is found at the end of the string, and False if not.
+
+```python
+text = "Hello, World!"
+check1 = text.endswith("World!")
+check2 = text.endswith("Hello")
+
+print(check1)  # Output: True
+print(check2)  # Output: False
+```
+
+The **[[isnumeric]]** method can check if a string is composed of only numbers. If the string contains only numbers, this method will return True. We can use this to check if a string contains numbers before passing the string to the **int()** function to convert it to an integer, avoiding an error. Useful!
+
+```python
+numeric_str = "12345"
+non_numeric_str = "abc123"
+
+check1 = numeric_str.isnumeric()
+check2 = non_numeric_str.isnumeric()
+
+print(check1)  # Output: True
+print(check2)  # Output: False
+```
+
+We took a look at string concatenation using the plus sign, earlier. We can also use the **[[join]]** method to concatenate strings. This method is called on a string that will be used to join a list of strings. The method takes a list of strings to be joined as a parameter, and returns a new string composed of each of the strings from our list joined using the initial string. For example, **" ".join(["This","is","a","sentence"])** would return the string **"This is a sentence"**.
+
+```python
+words = ["This", "is", "a", "sentence"]
+joined_text = " ".join(words)
+
+print(joined_text)  # Output: "This is a sentence"
+```
+
+The inverse of the join method is the **[[split]]** method. This allows us to split a string into a list of strings. By default, it splits by any whitespace characters. You can also split by any other characters by passing a parameter.
+
+```python
+text = "This is a sentence"
+split_text = text.split()  # By default, splits by whitespace
+
+print(split_text)  # Output: ['This', 'is', 'a', 'sentence']
+```
