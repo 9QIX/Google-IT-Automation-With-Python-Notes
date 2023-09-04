@@ -580,3 +580,114 @@ print(mirrored_string("'eve, Madam Eve")) # Should be True
 
 ```
 
+### **Skill Group 2**
+
+- Use the **format()** method, with **{}** placeholders for variable data, to create a new string.
+- Use a formatting expression, like **{:.2f}**, to format a float variable and configure the number of decimal places to display for the float.
+
+```python
+# This function converts measurement equivalents. Output is formatted 
+# as, "x ounces equals y pounds", with y limited to 2 decimal places. 
+def convert_weight(ounces):
+
+    # Conversion formula: 1 pound = 16 ounces
+    pounds = ounces/16 
+    
+    # The result is composed using the .format() method. There are two
+    # placeholders in the string: the first is for the "ounces" 
+    # variable and the second is for the "pounds" variable. The second
+    # placeholder formats the float result of the conversion 
+    # calculation to be limited to 2 decimal places.
+    result = "{} ounces equals {:.2f} pounds".format(ounces,pounds)
+    return result
+
+print(convert_weight(12)) # Should be: 12 ounces equals 0.75 pounds
+print(convert_weight(50.5)) # Should be: 50.5 ounces equals 3.16 pounds
+print(convert_weight(16)) # Should be: 16 ounces equals 1.00 pounds
+```
+
+### **Skill Group 3**
+
+- Within the **format()** parameters, select characters at specific index [ ] positions from a variable string.
+- Use the **format()** method, with **{}** placeholders for variable data, to create a new string.
+
+```python
+# This function generates a username using the first 3 letters of a
+# user’s last name plus their birth year. 
+def username(last_name, birth_year):
+    
+    # The .format() method will use the first 3 letters at index 
+    # positions [0,1,2] of the "last_name" variable for the first
+    # {} placeholder. The second {} placeholder concatenates the user’s
+    #  "birth_year" to that string to form a new string username.
+    return("{}{}".format(last_name[0:3],birth_year))
+
+
+print(username("Ivanov", "1985")) 
+# Should display "Iva1985" 
+print(username("Rodríguez", "2000")) 
+# Should display "Rod2000" 
+print(username("Deng", "1991")) 
+# Should display "Den1991"
+
+```
+
+**Skill Group 4**
+
+- Use the **.replace()** method to replace part of a string.
+- Use the **len()** function to get the number of index positions in a string.
+- Slice a string at a specific index position.
+
+```python
+# This function checks a given schedule entry for an old date and, if 
+# found, the function replaces it with a new date. 
+def replace_date(schedule, old_date, new_date):
+
+    # Check if the given "old_date" appears at the end of the given 
+    # string variable "schedule". 
+    if schedule.endswith(old_date):
+
+        # If True, the body of the if-block will run. The variable "n" is
+        # used to hold the slicing index position. The len() function
+        # is used to measure the length of the string "new_date".
+        p = len(old_date)
+
+        # The "new_schedule" string holds the updated string with the 
+        # old date replaced by the new date. The schedule[:-p] part of 
+        # the code trims the "old_date" substring from "schedule" 
+        # starting at the final index position (or right-side) counting
+        # towards the left the same number of index positions as 
+        # calculated from len(old_date). Then, the code schedule[-p:]
+        # starts the indexing position at the slot where the first
+        # character of the "old_date" used to be positioned. The 
+        # .replace(old_date, new_date) code inserts the "new_date" into
+        # the position where the "old_date" used to exist.  
+        new_schedule = schedule[:-p] + schedule[-p:].replace(old_date, new_date)
+
+        # Returns the schedule with the new date.
+        return new_schedule
+        
+    # If the schedule does not end with the old date, then return the
+    # original sentence without any modifications.
+    return schedule
+ 
+ 
+print(replace_date("Last year’s annual report will be released in March 2023", "2023", "2024")) 
+# Should display "Last year’s annual report will be released in March 2024"
+print(replace_date("In April, the CEO will hold a conference", "April", "May")) 
+# Should display "In April, the CEO will hold a conference"
+print(replace_date("The convention is scheduled for October", "October", "June")) 
+# Should display "The convention is scheduled for June"
+
+```
+
+# Python practice information
+
+For additional Python practice, the following links will take you to several popular online interpreters and codepads:
+
+- [Welcome to Python](https://www.python.org/shell/)
+- [Online Python Interpreter](https://www.onlinegdb.com/online_python_interpreter)
+- [Create a new Repl](https://repl.it/languages/python3)
+- [Online Python-3 Compiler (Interpreter)](https://www.tutorialspoint.com/execute_python3_online.php)
+- [Compile Python 3 Online](https://rextester.com/l/python3_online_compiler)
+- [Your Python Trinket](https://trinket.io/python3)
