@@ -495,3 +495,88 @@ Item: Purple Cup - Amount: 5 - Price: 16.25
 
 
 Check out the official documentation for [f-strings](https://docs.python.org/3/reference/lexical_analysis.html#f-strings)
+
+# Study Guide: Strings
+
+This study guide provides a quick-reference summary of what you learned in this lesson and serves as a guide for the upcoming practice quiz. The string readings in this section are great syntax guides to help you on the Strings Practice Quiz.
+
+In the Strings segment, you learned about the parts of a string, string indexing and slicing, creating new strings, string methods and operations, and formatting strings. 
+
+# Knowledge
+
+### String Operations and Methods
+
+- **.format()** - String method that can be used to concatenate and format strings. 
+    - **{:.2f}** - Within the .format() method, limits a floating point variable to 2 decimal places. The number of decimal places can be customized.
+- **len(string)** - String operation that returns the length of the string.
+- **string[x]** - String operation that accesses the character at index [x] of the string, where indexing starts at zero.
+- **string[x:y]** - String operation that accesses a substring starting at index [x] and ending at index [y-1]. If x is omitted, its value defaults to 0. If y is omitted, the value will default to len(string).
+- **string.replace(old, new)** - String method that returns a new string where all occurrences of an old substring have been replaced by a new substring.
+- **string.lower()** - String method that returns a copy of the string with all lowercase characters.
+
+# Coding skills
+
+### **Skill Group 1**
+
+- Use a **for** loop to iterate through each letter of a string.
+- Add a character to the front of a string.
+- Add a character to the end of a string.
+- Use the **.lower()** string method to convert the case (uppercase/lowercase) of the letters within a string variable. _This method is often used to eliminate cases as a factor when comparing two strings. For example, all lowercase “cat” is not equal to “Cat” because “Cat” contains an uppercase letter. To be able to compare the two strings to see if they are the same word, you can use the .lower() string method to remove capitalization as a factor in the string comparison._
+
+# Coding skills
+
+### **Skill Group 1**
+
+- Use a **for** loop to iterate through each letter of a string.
+- Add a character to the front of a string.
+- Add a character to the end of a string.
+- Use the **.lower()** string method to convert the case (uppercase/lowercase) of the letters within a string variable. _This method is often used to eliminate cases as a factor when comparing two strings. For example, all lowercase “cat” is not equal to “Cat” because “Cat” contains an uppercase letter. To be able to compare the two strings to see if they are the same word, you can use the .lower() string method to remove capitalization as a factor in the string comparison._
+
+```python
+# This function accepts a given string and checks each character of 
+# the string to see if it is a letter or not. If the character is a
+# letter, that letter is added to the end of the string variable
+# "forwards" and to the beginning of the string variable "backwards".
+def mirrored_string(my_string):
+
+    # Two variables are initialized as string data types using empty 
+    # quotes. The variable "forwards" will hold the "my_string"
+    # minus any character that is not a letter. The "backwards" 
+    # variable will hold the same letters as "forwards", but in  
+    # in reverse order.
+    forwards = ""
+    backwards = ""
+
+    # The for loop iterates through each character of the "my_string"
+    for character in my_string:
+
+        # The if-statement checks if the character is not a space.
+        if character.isalpha():
+
+            # If True, the body of the loop adds the character to the
+            # to the end of "forwards" and to the front of
+            # "backwards". 
+            forwards += character
+            backwards = character + backwards
+
+        # If False (meaning the character is not a letter), no action
+        # is needed. This coding approach results prevents any 
+        # non-alphabetical characters from being written to the
+        # "forwards" and "backwards" variables. The for loop will 
+        # restart until all characters in "my_string" have been
+        # processed.
+        
+    # The final if-statement compares the "forwards" and "backwards"
+    # strings to see if the letters are the same both forwards and
+    # backwards. Since Python is case sensitive, the two strings will 
+    # need to be converted to use the same case for this comparison. 
+    if forwards.lower() == backwards.lower():
+        return True
+    return False
+ 
+print(mirrored_string("12 Noon")) # Should be True
+print(mirrored_string("Was it a car or cat I saw")) # Should be False
+print(mirrored_string("'eve, Madam Eve")) # Should be True
+
+```
+
