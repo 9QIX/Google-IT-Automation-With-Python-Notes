@@ -107,3 +107,12 @@ This exercise will walk you through how to write a list comprehension to create 
 4. To the right of the square expression, write a **for** loop that iterates over “n” in a range from the “start” to “end” variables.
 5. Ensure the “end” range value is included in the **range()** by adding 1 to it.
 6. Run your code to see if it works!  If needed, the solution to this code is included in the “[Study Guide: List Operations and Methods](https://www.coursera.org/learn/python-crash-course/supplement/sbRdF/study-guide-lists-operations-and-methods "Link to the Study Guide for List Operations and Methods")” reading under “Skill Group 2” (list comprehensions).
+
+```python
+def squares(start, end):
+    return [n*n for n in range(start, end + 1)] 
+
+print(squares(2, 3))  # Should print [4, 9]
+print(squares(1, 5))  # Should print [1, 4, 9, 16, 25]
+print(squares(0, 10)) # Should print [0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+```
