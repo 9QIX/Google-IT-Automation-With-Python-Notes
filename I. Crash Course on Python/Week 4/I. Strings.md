@@ -419,6 +419,11 @@ If the placeholders indicate a field name, they’re replaced by the variable co
 
 If the placeholders include a colon, what comes after the colon is a formatting expression. See below for the expression reference.
 
+```python
+# {:d} integer value
+'{:d}'.format(10.5) → '10'
+```
+
 Official documentation for [the format string syntax](https://docs.python.org/3/library/string.html#formatstrings)
 
 ### Formatting expressions
@@ -513,15 +518,6 @@ In the Strings segment, you learned about the parts of a string, string indexing
 - **string[x:y]** - String operation that accesses a substring starting at index [x] and ending at index [y-1]. If x is omitted, its value defaults to 0. If y is omitted, the value will default to len(string).
 - **string.replace(old, new)** - String method that returns a new string where all occurrences of an old substring have been replaced by a new substring.
 - **string.lower()** - String method that returns a copy of the string with all lowercase characters.
-
-# Coding skills
-
-### **Skill Group 1**
-
-- Use a **for** loop to iterate through each letter of a string.
-- Add a character to the front of a string.
-- Add a character to the end of a string.
-- Use the **.lower()** string method to convert the case (uppercase/lowercase) of the letters within a string variable. _This method is often used to eliminate cases as a factor when comparing two strings. For example, all lowercase “cat” is not equal to “Cat” because “Cat” contains an uppercase letter. To be able to compare the two strings to see if they are the same word, you can use the .lower() string method to remove capitalization as a factor in the string comparison._
 
 # Coding skills
 
