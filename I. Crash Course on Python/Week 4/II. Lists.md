@@ -257,7 +257,6 @@ years = ["January 2023", "May 2025", "April 2023", "August 2024", "September 202
 # new list "updated_years" unchanged.
 updated_years = [year.replace("2023","2024") if year[-4:] == "2023" else year for year in years]
 
-
 print(updated_years) 
 # Should print ["January 2024", "May 2025", "April 2024", "August 2024", "September 2025", "December 2024"]
 ```
