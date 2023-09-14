@@ -27,3 +27,67 @@ You might be wondering why tuples are a thing, given how similar they are to lis
 # Iterating Over Lists Using Enumerate
 
 When we covered _for_ loops, we showed the example of iterating over a list. This lets you iterate over each element in the list, exposing the element to the for loop as a variable. But what if you want to access the elements in a list, along with the index of the element in question? You can do this using the **enumerate()** function. The enumerate() function takes a list as a parameter and returns a tuple for each element in the list. The first value of the tuple is the index and the second value is the element itself.
+
+# List Comprehension Examples
+
+You can create a list from a sequence using a **for** loop, but there’s a more streamlined way to do this by using a list comprehension. List comprehensions allow you to create a new list from a sequence or a range in a single line.
+
+# Simple List Comprehension
+
+For example, **[ x*2 for x in range(1,11) ]** is a simple list comprehension. This single line of code iterates over a range from 1 to 10, multiplies each element in the range by 2, and creates a new list from all multiples of 2 from 2 to 20.
+
+```python
+### Simple List Comprehension
+print("List comprehension result:")
+
+# The following list comprehension compacts several lines 
+# of code into one line:
+print([x*2 for x in range(1,11)]) 
+
+### Long form for loop
+print("Long form code result:")
+
+# The list comprehension above accomplishes the same result as
+# the long form version of the code:
+my_list = []
+for x in range(1,11):
+   my_list.append(x*2)
+print(my_list)
+# Click Run to compare the two results.
+```
+Output:
+```
+List comprehension result:
+[2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+Long form code result:
+[2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+```
+
+# List Comprehension with Conditional Statement
+
+You can also use conditionals with list comprehensions to build even more complex and powerful statements. You can do this by appending an if statement to the end of the list comprehension. For example, **[ x for x in range(1,101) if x % 10 == 0 ]** generates a new list containing all the integers divisible by 10 from 1 to 100. The if statement evaluates each value in the range from 1 to 100 to check if it’s evenly divisible by 10. If it is, the number is added to a new list.
+
+```python
+### List Comprehension with Conditional Statement
+print("List comprehension result:")
+
+# The following list comprehension compacts multiple lines 
+# of code into one line:
+print([ x for x in range(1,101) if x % 10 == 0 ])
+
+### Long form for loop with nested if-statement
+print("Long form code result:")
+
+# The list comprehension above accomplishes the same result as
+# the long form version of the code:
+my_list = []
+for x in range(1,101):
+  if x % 10 == 0:
+    my_list.append(x)
+print(my_list)
+# Click Run to observe the two results.
+```
+Output:
+```
+
+```
