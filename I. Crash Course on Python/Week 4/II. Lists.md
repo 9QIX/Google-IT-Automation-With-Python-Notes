@@ -73,7 +73,7 @@ print("List comprehension result:")
 
 # The following list comprehension compacts multiple lines 
 # of code into one line:
-print([ x for x in range(1,101) if x % 10 == 0 ])
+print([x for x in range(1,101) if x % 10 == 0 ])
 
 ### Long form for loop with nested if-statement
 print("Long form code result:")
@@ -89,5 +89,21 @@ print(my_list)
 ```
 Output:
 ```
-
+List comprehension result:
+[10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+Long form code result:
+[10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 ```
+
+List comprehensions can be really powerful, but they can also be complex, resulting in code that’s hard to read. Be careful when using them, since it might make it more difficult for someone else looking at your code to easily understand what the code is doing. It is a best practice to add descriptive comments about any list comprehensions used in your code. This helps to communicate the purpose of list comprehensions to other coders. Comments will also help you remember the goal of the code when performing future code additions and maintenance.
+
+## **Practice exercise**
+
+This exercise will walk you through how to write a list comprehension to create a list of squared numbers (n*n). It needs to return a list of squares of consecutive numbers between “start” and “end” _inclusively_. For example, squares(2, 3) should return a list containing [4, 9].
+
+1. The function receives the variables “start” and “end” through the function parameters. 
+2. In the **return** line, start by entering the list brackets [ ]
+3. Between the brackets [ ], enter the arithmetic expression to square a variable “n”. 
+4. To the right of the square expression, write a **for** loop that iterates over “n” in a range from the “start” to “end” variables.
+5. Ensure the “end” range value is included in the **range()** by adding 1 to it.
+6. Run your code to see if it works!  If needed, the solution to this code is included in the “[Study Guide: List Operations and Methods](https://www.coursera.org/learn/python-crash-course/supplement/sbRdF/study-guide-lists-operations-and-methods "Link to the Study Guide for List Operations and Methods")” reading under “Skill Group 2” (list comprehensions).
