@@ -80,6 +80,10 @@ pet_dictionary = {"dogs": ["Yorkie", "Collie", "Bulldog"], "cats": ["Persian", "
 print(pet_dictionary.get("dogs", 0))
 # Should print ['Yorkie', 'Collie', 'Bulldog']
 ```
+Output:
+```
+['Yorkie', 'Collie', 'Bulldog']
+```
 
 ## Lists only:
 
@@ -97,6 +101,10 @@ pet_list  = ["Yorkie", "Collie", "Bulldog", "Persian", "Scottish Fold", "Siberia
 
 print(pet_list[0:3])
 # Should print ['Yorkie', 'Collie', 'Bulldog']
+```
+Output:
+```
+['Yorkie', 'Collie', 'Bulldog']
 ```
 
 # Coding skills
@@ -132,6 +140,10 @@ def sum_server_use_time(Server):
 FileServer = {"EndUser1": 2.25, "EndUser2": 4.5, "EndUser3": 1, "EndUser4": 3.75, "EndUser5": 0.6, "EndUser6": 8}
 
 print(sum_server_use_time(FileServer)) # Should print 20.1
+```
+Output:
+```
+20.1
 ```
 
 ### **Skill Group 2**
@@ -173,6 +185,10 @@ def list_full_names(employee_dictionary):
 print(list_full_names({"Ali": ["Muhammad", "Amir", "Malik"], "Devi": ["Ram", "Amaira"], "Chen": ["Feng", "Li"]}))
 # Should print ['Muhammad Ali', 'Amir Ali', 'Malik Ali', 'Ram Devi', 'Amaira Devi', 'Feng Chen', 'Li Chen']
 ```
+Output:
+```
+['Muhammad Ali', 'Amir Ali', 'Malik Ali', 'Ram Devi', 'Amaira Devi', 'Feng Chen', 'Li Chen']
+```
 
 **Skill Group 3**
 
@@ -186,7 +202,6 @@ print(list_full_names({"Ali": ["Muhammad", "Amir", "Malik"], "Devi": ["Ram", "Am
 # company’s IT Department. The resources belong to multiple categories.
 # The function should reverse the keys and values to show which 
 # categories (values) each resource (key) belongs to. 
-
 
 def invert_resource_dict(resource_dictionary):
   # Initialize a "new_dictionary" variable as a dict data type using
