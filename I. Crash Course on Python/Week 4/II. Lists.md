@@ -306,6 +306,10 @@ def change_string(given_string):
 print(change_string("1one 2two 3three 4four 5five")) 
 # Should print "one-1 two-2 three-3 four-4 five-5"  
 ```
+Output:
+```
+one-1 two-2 three-3 four-4 five-5
+```
 
 ### **Skill Group 5**
 
