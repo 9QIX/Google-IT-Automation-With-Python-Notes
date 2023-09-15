@@ -199,3 +199,112 @@ def odd_numbers(x, y):
 print(odd_numbers(5, 15)) 
 # Should print [5, 7, 9, 11, 13]
 ```
+Output:
+```
+[5, 7, 9, 11, 13]
+```
+
+## **Skill 4:** Using **dictionary** methods
+
+- Iterate through the keys and values of a dictionary.
+- Return the keys and values in a formatted string using the .format() function.
+
+```python
+# The network() function accepts a dictionary "servers" as a parameter.
+def network(servers):
+
+    # A string variable is initialized to hold the "result". 
+    result = ""
+
+    # For each "hostname" (key) and "IP address" (value) in the "server" dictionary items...
+    for hostname, IP_address in servers.items():
+
+        # A string identifying the hostname and IP address for each server is added
+        # to the "result" variable. The string .format() function and is used to plug
+        # the hostname and IP_address variables into the designated {} placeholders
+        # within the string.
+        result += "The IP address of the {} server is {}".format(hostname, IP_address) + "\n"
+    
+    # Return the "result" variable string.
+    return result 
+
+# Call the "network" function with the dictionary. 
+print(network({"Domain Name Server":"8.8.8.8", "Gateway Server":"192.168.1.1", "Print Server":"192.168.1.33", "Mail Server":"192.168.1.190"}))
+
+# Should print:
+# The IP address of the Domain Name Server server is 8.8.8.8
+# The IP address of the Gateway Server server is 192.168.1.1
+# The IP address of the Print Server server is 192.168.1.33
+# The IP address of the Mail Server server is 192.168.1.190
+```
+Output:
+```
+The IP address of the Domain Name Server server is 8.8.8.8
+The IP address of the Gateway Server server is 192.168.1.1
+The IP address of the Print Server server is 192.168.1.33
+The IP address of the Mail Server server is 192.168.1.190
+```
+
+- Create a copy of a dictionary.
+- Iterate through the values of the new dictionary.
+- Change each value in the new dictionary, while keeping the same keys.
+
+```python
+# The scores() function accepts a dictionary "game_scores" as a parameter.
+def reset_scores(game_scores):
+
+    # The .copy() dictionary method is used to create a new copy of the "game_scores".
+    new_game_scores = game_scores.copy() 
+
+    # The for loop iterates over new_game_scores items, with the player as the key
+    # and the score as the value. 
+    for player, score in new_game_scores.items():
+    
+        # The dictionary operation to assign a new value to a key is used
+        # to reset the grade values to 0.
+        new_game_scores[player] = 0
+  
+    return new_game_scores
+ 
+# The dictionary is defined.
+game1_scores = {"Arshi": 3, "Catalina": 7, "Diego": 6}
+ 
+# Call the "reset_scores" function with the "game1_scores" dictionary. 
+print(reset_scores(game1_scores))
+# Should print {'Arshi': 0, 'Catalina': 0, 'Diego': 0}
+```
+Output:
+```
+{'Arshi': 0, 'Catalina': 0, 'Diego': 0}
+```
+
+# Reminder: Correct syntax is critical
+
+Using precise syntax is critical when writing code in any programming language, including Python. Even a small typo can cause a syntax error and the automated Python-coded quiz grader will mark your code as incorrect. This reflects real life coding errors in the sense that a single error in spelling, case, punctuation, etc. can cause your code to fail. Coding problems caused by imprecise syntax will always be an issue whether you are learning a programming language or you are using programming skills on the job. So, it is critical to start the habit of being precise in your code now. 
+
+No credit will be given if there are any coding errors on the automated graded quizzes - including minor errors. Fortunately, you have 3 optional retake opportunities on the graded quizzes in this course. Additionally, you have unlimited retakes on practice quizzes and can review the videos and readings as many times as you need to master the concepts in this course.  
+
+Now, before starting the graded quiz, please review this list of common syntax errors coders make when writing code.
+
+**Common syntax errors:**
+
+- Misspellings
+- Incorrect indentations
+- Missing or incorrect key characters:
+    - Parenthetical types - ( curved ), [ square ], { curly }
+    - Quote types - "straight-double" or 'straight-single', “curly-double” or ‘curly-single’
+    - Block introduction characters, like colons - :
+- Data type mismatches
+- Missing, incorrectly used, or misplaced Python reserved words
+- Using the wrong case (uppercase/lowercase) - Python is a case-sensitive language 
+
+# Resources
+
+For additional Python practice, the following links will take you to several popular online interpreters and codepads:
+
+- [Welcome to Python](https://www.python.org/shell/) 
+- [Online Python Interpreter](https://www.onlinegdb.com/online_python_interpreter) 
+- [Create a new Repl](https://repl.it/languages/python3) 
+- [Online Python-3 Compiler (Interpreter)](https://www.tutorialspoint.com/execute_python3_online.php)
+- [Compile Python 3 Online](https://rextester.com/l/python3_online_compiler)
+- [Your Python Trinket](https://trinket.io/python3)
