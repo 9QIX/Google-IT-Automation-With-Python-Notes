@@ -296,7 +296,7 @@ Now, before starting the graded quiz, please review this list of common syntax e
     - Block introduction characters, like colons - :
 - Data type mismatches
 - Missing, incorrectly used, or misplaced Python reserved words
-- Using the wrong case (uppercase/lowercase) - Python is a case-sensitive language
+- Using the wrong case (uppercase/lowercase) - Python is a case-sensitive language.
 
 # Resources
 
