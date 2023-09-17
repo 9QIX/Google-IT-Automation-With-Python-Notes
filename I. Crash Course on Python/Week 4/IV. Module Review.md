@@ -12,7 +12,7 @@ It is time to prepare for the Module 4 Graded Quiz. Please review the following 
 
 ## Operations, Methods, and Functions
 
-- **String Methods, Operations, and Functions**
+- ### **String Methods, Operations, and Functions**
 1. `.upper()`: This method returns a copy of the string with all characters converted to uppercase.
    ```python
    text = "hello world"
@@ -77,24 +77,116 @@ It is time to prepare for the Module 4 Graded Quiz. Please review the following 
    print(length)  # Output: 13
    ```
 
-These are some commonly used string operations and functions in Python that can be very useful for manipulating and working with strings in various ways.
-- **List Operations and Methods**
-    - .reverse()
-    - .extend()
-    - .insert()
-    - .append()
-    - .remove()
-    - .sort()
-    - list comprehensions [ ]
-    - list comprehensions [ ] with if condition
-- **Dictionary Operations and Methods**
-    - .items()
-    - .update()
-    - .keys()
-    - .values()
-    - .copy()
-    - dictionary[key]
-    - dictionary[key] = value 
+
+- ### **List Operations and Methods**
+
+1. `.reverse()`: This method reverses the elements of a list in place.
+   ```python
+   my_list = [1, 2, 3, 4, 5]
+   my_list.reverse()
+   print(my_list)  # Output: [5, 4, 3, 2, 1]
+   ```
+
+2. `.extend()`: This method extends a list by appending elements from another iterable to the end of it.
+   ```python
+   list1 = [1, 2, 3]
+   list2 = [4, 5, 6]
+   list1.extend(list2)
+   print(list1)  # Output: [1, 2, 3, 4, 5, 6]
+   ```
+
+3. `.insert()`: This method inserts an element at a specified position in a list.
+   ```python
+   my_list = [1, 2, 3, 5]
+   my_list.insert(3, 4)
+   print(my_list)  # Output: [1, 2, 3, 4, 5]
+   ```
+
+4. `.append()`: This method adds an element to the end of a list.
+   ```python
+   my_list = [1, 2, 3]
+   my_list.append(4)
+   print(my_list)  # Output: [1, 2, 3, 4]
+   ```
+
+5. `.remove()`: This method removes the first occurrence of a specified element from a list.
+   ```python
+   my_list = [1, 2, 3, 4, 3]
+   my_list.remove(3)
+   print(my_list)  # Output: [1, 2, 4, 3]
+   ```
+
+6. `.sort()`: This method sorts the elements of a list in ascending order in place.
+   ```python
+   my_list = [4, 1, 3, 2]
+   my_list.sort()
+   print(my_list)  # Output: [1, 2, 3, 4]
+   ```
+
+7. List comprehensions `[ ]`: List comprehensions are a concise way to create lists based on existing iterables.
+   ```python
+   numbers = [1, 2, 3, 4, 5]
+   squares = [x**2 for x in numbers]
+   print(squares)  # Output: [1, 4, 9, 16, 25]
+   ```
+
+8. List comprehensions `[ ]` with if condition: You can use list comprehensions with conditional statements to filter elements in the list.
+   ```python
+   numbers = [1, 2, 3, 4, 5]
+   even_numbers = [x for x in numbers if x % 2 == 0]
+   print(even_numbers)  # Output: [2, 4]
+   ```
+
+- ### **Dictionary Operations and Methods**
+
+1. `.items()`: This method returns a view of all key-value pairs in a dictionary as tuples.
+   ```python
+   my_dict = {'a': 1, 'b': 2, 'c': 3}
+   items = my_dict.items()
+   print(items)  # Output: dict_items([('a', 1), ('b', 2), ('c', 3)])
+   ```
+
+2. `.update()`: This method updates a dictionary with key-value pairs from another dictionary or iterable.
+   ```python
+   dict1 = {'a': 1, 'b': 2}
+   dict2 = {'b': 3, 'c': 4}
+   dict1.update(dict2)
+   print(dict1)  # Output: {'a': 1, 'b': 3, 'c': 4}
+   ```
+
+3. `.keys()`: This method returns a view of all keys in a dictionary.
+   ```python
+   my_dict = {'a': 1, 'b': 2, 'c': 3}
+   keys = my_dict.keys()
+   print(keys)  # Output: dict_keys(['a', 'b', 'c'])
+   ```
+
+4. `.values()`: This method returns a view of all values in a dictionary.
+   ```python
+   my_dict = {'a': 1, 'b': 2, 'c': 3}
+   values = my_dict.values()
+   print(values)  # Output: dict_values([1, 2, 3])
+   ```
+
+5. `.copy()`: This method creates a shallow copy of a dictionary.
+   ```python
+   original_dict = {'a': 1, 'b': 2}
+   copied_dict = original_dict.copy()
+   ```
+
+6. `dictionary[key]`: You can access the value associated with a specific key in a dictionary using square brackets.
+   ```python
+   my_dict = {'a': 1, 'b': 2, 'c': 3}
+   value = my_dict['b']
+   print(value)  # Output: 2
+   ```
+
+7. `dictionary[key] = value`: You can assign a value to a specific key in a dictionary or add a new key-value pair.
+   ```python
+   my_dict = {'a': 1, 'b': 2}
+   my_dict['c'] = 3  # Adding a new key-value pair
+   my_dict['a'] = 4  # Updating the value of an existing key
+   ```
 
 # Coding Skills
 
