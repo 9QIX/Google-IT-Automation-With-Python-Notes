@@ -13,15 +13,71 @@ It is time to prepare for the Module 4 Graded Quiz. Please review the following 
 ## Operations, Methods, and Functions
 
 - **String Methods, Operations, and Functions**
-    - .upper()
-    - .lower()
-    - .split()
-    - .format()
-    - .isnumeric()
-    - .isalpha()
-    - .replace()
-    - string index [ ]
-    - len()
+1. `.upper()`: This method returns a copy of the string with all characters converted to uppercase.
+   ```python
+   text = "hello world"
+   result = text.upper()
+   print(result)  # Output: "HELLO WORLD"
+   ```
+
+2. `.lower()`: This method returns a copy of the string with all characters converted to lowercase.
+   ```python
+   text = "Hello World"
+   result = text.lower()
+   print(result)  # Output: "hello world"
+   ```
+
+3. `.split()`: This method splits a string into a list of substrings based on a specified separator. By default, it splits on whitespace.
+   ```python
+   text = "apple orange banana"
+   result = text.split()
+   print(result)  # Output: ['apple', 'orange', 'banana']
+   ```
+
+4. `.format()`: This method is used for string formatting. You can insert variables or values into a string at specified positions using placeholders.
+   ```python
+   name = "John"
+   age = 30
+   message = "My name is {} and I am {} years old.".format(name, age)
+   print(message)  # Output: "My name is John and I am 30 years old."
+   ```
+
+5. `.isnumeric()`: This method checks if all characters in the string are numeric (0-9).
+   ```python
+   number = "12345"
+   result = number.isnumeric()
+   print(result)  # Output: True
+   ```
+
+6. `.isalpha()`: This method checks if all characters in the string are alphabetic (letters).
+   ```python
+   text = "Hello"
+   result = text.isalpha()
+   print(result)  # Output: True
+   ```
+
+7. `.replace()`: This method replaces occurrences of a specified substring with another substring in a string.
+   ```python
+   text = "I like apples."
+   result = text.replace("apples", "bananas")
+   print(result)  # Output: "I like bananas."
+   ```
+
+8. String index `[ ]`: You can access individual characters in a string by their index, starting from 0 for the first character.
+   ```python
+   text = "Python"
+   char = text[0]  # Access the first character 'P'
+   print(char)
+   ```
+
+9. `len()`: This function returns the length (number of characters) of a string.
+   ```python
+   text = "Hello, World!"
+   length = len(text)
+   print(length)  # Output: 13
+   ```
+
+These are some commonly used string operations and functions in Python that can be very useful for manipulating and working with strings in various ways.
 - **List Operations and Methods**
     - .reverse()
     - .extend()
