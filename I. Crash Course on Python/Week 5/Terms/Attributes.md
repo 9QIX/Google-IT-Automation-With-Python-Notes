@@ -1,0 +1,1 @@
+**[[Attributes]]:** Attributes are the characteristics or properties associated with a class or object. These attributes store data that describes the object's state. In Python, attributes are defined within a class and can have different data types like strings, numbers, or other objects. For example, a `Car` class might have attributes like `color`, `make`, and `model`.

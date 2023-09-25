@@ -1,0 +1,1 @@
+**[[Object]]:** An object is an instance of a class, created based on the class's blueprint. Objects represent specific instances or occurrences of a concept. For example, if you have a `Car` class, an object of that class could represent a specific car with its unique properties and behaviors.

@@ -1,0 +1,1 @@
+**[[Methods]]:** Methods are functions defined within a class that can perform actions or operations related to that class. They define the behaviors or actions that objects of the class can undertake. Methods can access and manipulate the attributes of the class. For instance, a `Car` class might have methods like `start_engine()` and `accelerate()`.
