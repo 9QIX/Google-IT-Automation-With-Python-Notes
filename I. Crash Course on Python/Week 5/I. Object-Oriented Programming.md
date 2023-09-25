@@ -1,0 +1,45 @@
+# Object-Oriented Programming Defined
+
+In object-oriented programming, concepts are modeled as **[[classes]]** and **[[objects]]**. An idea is defined using a class, and an instance of this class is called an object. Almost everything in Python is an object, including strings, lists, dictionaries, and numbers. When we create a list in Python, we’re creating an object which is an instance of the list class, which represents the concept of a list. Classes also have attributes and methods associated with them. **[[Attributes]]** are the characteristics of the class, while methods are functions that are part of the class.
+
+1. **[[Class]]:** A class is a blueprint or template that defines the structure and behavior of an object. It serves as a model for creating objects of that class. In Python, classes are defined using the `class` keyword and can contain attributes and methods.
+2. **[[Object]]:** An object is an instance of a class, created based on the class's blueprint. Objects represent specific instances or occurrences of a concept. For example, if you have a `Car` class, an object of that class could represent a specific car with its unique properties and behaviors.
+3. **[[Attributes]]:** Attributes are the characteristics or properties associated with a class or object. These attributes store data that describes the object's state. In Python, attributes are defined within a class and can have different data types like strings, numbers, or other objects. For example, a `Car` class might have attributes like `color`, `make`, and `model`.
+4. **[[Methods]]:** Methods are functions defined within a class that can perform actions or operations related to that class. They define the behaviors or actions that objects of the class can undertake. Methods can access and manipulate the attributes of the class. For instance, a `Car` class might have methods like `start_engine()` and `accelerate()`.
+
+In Python, OOP is an integral part of the language, and most data types and operations are implemented using classes and objects. This makes Python highly extensible and allows you to create custom classes to model specific concepts or entities in your programs.
+
+Here's a Pythonic example to illustrate these concepts:
+
+```python
+# Define a class called Car
+class Car:
+    # Constructor method to initialize attributes
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.is_running = False  # A boolean attribute
+
+    # Method to start the car's engine
+    def start_engine(self):
+        self.is_running = True
+        print(f"The {self.year} {self.make} {self.model}'s engine is now running.")
+
+    # Method to accelerate the car
+    def accelerate(self):
+        if self.is_running:
+            print(f"The {self.year} {self.make} {self.model} is accelerating.")
+        else:
+            print(f"You need to start the engine first.")
+
+# Create an instance (object) of the Car class
+my_car = Car("Toyota", "Camry", 2022)
+
+# Access attributes and call methods
+print(f"My car is a {my_car.year} {my_car.make} {my_car.model}.")
+my_car.start_engine()
+my_car.accelerate()
+```
+
+In this example, `Car` is a class, `my_car` is an object, and `make`, `model`, `year`, and `is_running` are attributes. The `start_engine()` and `accelerate()` methods define behaviors associated with the `Car` class.
